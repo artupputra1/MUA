@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary"
+    tools:context=".account.AccountFragment">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:gravity="start"
+            android:minHeight="?attr/actionBarSize"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_marginLeft="@dimen/marginContent"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:textSize="20sp"
+                        android:textColor="@color/colorWhite"
+                        android:text="Profil"
+                        style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                        android:src="@drawable/ic_back_button" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <ImageView
+            android:id="@+id/ivProfile"
+            android:layout_marginTop="@dimen/marginContentOut"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_ava"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+
+        <LinearLayout
+            android:layout_marginTop="50dp"
+            android:background="@drawable/bg_register"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="@dimen/marginForm"
+                android:layout_marginHorizontal="@dimen/marginScreen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    style="@style/textForm"
+                    android:text="Nama"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    style="@style/textForm"
+                    android:layout_marginRight="@dimen/marginForm"
+                    android:text=":"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/tvName"
+                    style="@style/textForm"
+                    android:text="Nama"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginBottom="@dimen/marginForm"
+                android:layout_marginHorizontal="@dimen/marginScreen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    style="@style/textForm"
+                    android:text="Email"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    style="@style/textForm"
+                    android:layout_marginRight="@dimen/marginForm"
+                    android:text=":"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/tvEmail"
+                    style="@style/textForm"
+                    android:text="Nama"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginBottom="@dimen/marginForm"
+                android:layout_marginHorizontal="@dimen/marginScreen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    style="@style/textForm"
+                    android:text="Nomor Handphone"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    style="@style/textForm"
+                    android:layout_marginRight="@dimen/marginForm"
+                    android:text=":"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/tvPhone"
+                    style="@style/textForm"
+                    android:text="Nama"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <Button
+                android:layout_marginHorizontal="@dimen/marginScreen"
+                android:layout_marginTop="@dimen/marginContentOut"
+                android:layout_marginBottom="@dimen/marginForm"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/fontForm"
+                android:layout_width="match_parent"
+                android:background="@drawable/button_disabled"
+                android:layout_height="45dp"
+                android:id="@+id/btEdit"
+                android:text="Edit Profil" />
+            <Button
+                android:layout_marginHorizontal="@dimen/marginScreen"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/fontForm"
+                android:layout_width="match_parent"
+                android:background="@drawable/button_primary"
+                android:layout_height="45dp"
+                android:id="@+id/btMua"
+                android:text="Masuk Sebagai MUA" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

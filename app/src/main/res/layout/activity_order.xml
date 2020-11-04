@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@color/colorWhite"
+    tools:context=".OrderActivity">
+
+    <ScrollView
+        android:layout_marginBottom="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:padding="@dimen/marginScreen"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/textFormBold"
+                android:text="Nama Layanan : "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tvServices"
+                android:layout_marginTop="@dimen/marginForm"
+                style="@style/textForm"
+                android:text="Paket Wisuda 123"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <View
+                android:layout_marginTop="@dimen/marginSubHeader"
+                android:background="@color/colorGray"
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"/>
+
+            <TextView
+                android:layout_marginTop="@dimen/marginForm"
+                style="@style/textFormBold"
+                android:text="Harga Layanan : "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_marginTop="@dimen/marginForm"
+                style="@style/textForm"
+                android:text="Rp. 450000"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <View
+                android:layout_marginTop="@dimen/marginSubHeader"
+                android:background="@color/colorGray"
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"/>
+
+            <TextView
+                android:layout_marginTop="@dimen/marginForm"
+                style="@style/textFormBold"
+                android:text="Informasi : "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tvInformation"
+                android:layout_marginTop="@dimen/marginForm"
+                style="@style/textForm"
+                android:text="Paket Wisuda 123"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <View
+                android:layout_marginTop="@dimen/marginSubHeader"
+                android:background="@color/colorGray"
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"/>
+
+            <TextView
+                style="@style/textFormBold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginForm"
+                android:text="Tanggal Booking " />
+
+            <TextView
+                android:gravity="center_vertical"
+                style="@style/textForm"
+                android:id="@+id/tvDate"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/heightForm"
+                android:layout_marginTop="@dimen/marginForm"
+                android:drawablePadding="16dp"
+                android:ellipsize="end"
+                android:background="@drawable/bg_form"
+                android:hint="Tanggal Booking"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/marginContent" />
+
+            <View
+                android:layout_marginTop="@dimen/marginSubHeader"
+                android:background="@color/colorGray"
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"/>
+
+            <TextView
+                style="@style/textFormBold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginForm"
+                android:text="Jam Booking " />
+
+            <TextView
+                android:gravity="center_vertical"
+                style="@style/textForm"
+                android:id="@+id/tvTime"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/heightForm"
+                android:layout_marginTop="@dimen/marginForm"
+                android:drawablePadding="16dp"
+                android:ellipsize="end"
+                android:background="@drawable/bg_form"
+                android:hint="Jam Booking"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/marginContent" />
+
+            <View
+                android:layout_marginTop="@dimen/marginSubHeader"
+                android:background="@color/colorGray"
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"/>
+
+            <TextView
+                style="@style/textFormBold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginForm"
+                android:text="Nama Customer" />
+
+            <EditText
+                android:gravity="center_vertical"
+                style="@style/textForm"
+                android:id="@+id/edCustomer"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/heightForm"
+                android:layout_marginTop="@dimen/marginForm"
+                android:drawablePadding="16dp"
+                android:ellipsize="end"
+                android:background="@drawable/bg_form"
+                android:hint="Masukkan Nama Customer"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/marginContent" />
+
+            <View
+                android:layout_marginTop="@dimen/marginSubHeader"
+                android:background="@color/colorGray"
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"/>
+
+            <TextView
+                style="@style/textFormBold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginForm"
+                android:text="Nomor HP " />
+
+            <EditText
+                android:gravity="center_vertical"
+                style="@style/textForm"
+                android:id="@+id/edPhone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/heightForm"
+                android:layout_marginTop="@dimen/marginForm"
+                android:drawablePadding="16dp"
+                android:ellipsize="end"
+                android:background="@drawable/bg_form"
+                android:hint="Masukkan Nomor HP"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/marginContent" />
+
+            <View
+                android:layout_marginTop="@dimen/marginSubHeader"
+                android:background="@color/colorGray"
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"/>
+
+            <TextView
+                style="@style/textFormBold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginForm"
+                android:text="Jumlah Orang " />
+
+            <EditText
+                android:gravity="center_vertical"
+                style="@style/textForm"
+                android:id="@+id/edPerson"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/heightForm"
+                android:layout_marginTop="@dimen/marginForm"
+                android:drawablePadding="16dp"
+                android:ellipsize="end"
+                android:background="@drawable/bg_form"
+                android:hint="Masukkan Jumlah Orang"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/marginContent" />
+
+            <View
+                android:layout_marginTop="@dimen/marginSubHeader"
+                android:background="@color/colorGray"
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"/>
+
+            <TextView
+                style="@style/textFormBold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginForm"
+                android:text="Alamat " />
+
+            <EditText
+                android:gravity="center_vertical"
+                style="@style/textForm"
+                android:id="@+id/edAddress"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/heightForm"
+                android:layout_marginTop="@dimen/marginForm"
+                android:drawablePadding="16dp"
+                android:ellipsize="end"
+                android:background="@drawable/bg_form"
+                android:hint="Masukkan Alamat"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/marginContent" />
+
+            <View
+                android:layout_marginTop="@dimen/marginSubHeader"
+                android:background="@color/colorGray"
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <LinearLayout
+
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/fontForm"
+            android:layout_gravity="end"
+            android:layout_width="match_parent"
+            android:background="@drawable/button_primary"
+            android:layout_height="@dimen/heightForm"
+            android:id="@+id/btOrder"
+            android:text="BOOKING" />
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

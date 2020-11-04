@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mua.EditMuaActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:padding="@dimen/marginScreen"
+            android:background="@drawable/bg_register"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginContent"
+                android:text="Foto Profil"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/fontForm" />
+
+            <FrameLayout
+                android:layout_marginTop="@dimen/marginForm"
+                android:layout_gravity="center"
+                android:layout_width="300dp"
+                android:layout_height="200dp">
+                <ImageView
+                    android:layout_gravity="center"
+                    android:src="@color/colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:id="@+id/ivProfile"/>
+                <Button
+                    android:id="@+id/btImage"
+                    android:layout_gravity="bottom|end"
+                    android:text="Select Image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </FrameLayout>
+
+            <TextView
+                android:layout_marginTop="@dimen/marginContent"
+                style="@style/textForm"
+                android:text="Owner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:layout_marginTop="@dimen/marginForm"
+                android:id="@+id/edOwner"
+                android:paddingHorizontal="15dp"
+                android:background="@drawable/bg_form"
+                android:drawablePadding="16dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:hint="Masukkan Nama Owner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/heightForm" />
+
+            <TextView
+                android:layout_marginTop="@dimen/marginContent"
+                style="@style/textForm"
+                android:text="Nama MUA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:layout_marginTop="@dimen/marginForm"
+                android:id="@+id/edNameMua"
+                android:paddingHorizontal="15dp"
+                android:background="@drawable/bg_form"
+                android:drawablePadding="16dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:hint="Masukkan Nama MUA"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/heightForm" />
+
+            <TextView
+                android:layout_marginTop="@dimen/marginContent"
+                style="@style/textForm"
+                android:text="Address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:layout_marginTop="@dimen/marginForm"
+                android:id="@+id/edAddress"
+                android:paddingHorizontal="15dp"
+                android:background="@drawable/bg_form"
+                android:drawablePadding="16dp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:hint="Masukkan Alamat"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/heightForm" />
+
+            <TextView
+                android:layout_marginTop="@dimen/marginContent"
+                style="@style/textForm"
+                android:text="Nomor Handphone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:layout_marginTop="@dimen/marginForm"
+                android:id="@+id/edPhone"
+                android:paddingHorizontal="15dp"
+                android:background="@drawable/bg_form"
+                android:drawablePadding="16dp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:hint="Masukkan Nomor Handphone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/heightForm" />
+
+            <TextView
+                android:layout_marginTop="@dimen/marginContent"
+                style="@style/textForm"
+                android:text="Informasi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:layout_marginTop="@dimen/marginForm"
+                android:id="@+id/edNote"
+                android:paddingHorizontal="15dp"
+                android:background="@drawable/bg_form"
+                android:drawablePadding="16dp"
+                android:maxLines="5"
+                android:ellipsize="end"
+                android:hint="Masukkan Note"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/heightForm" />
+
+            <TextView
+                android:layout_marginTop="@dimen/marginContent"
+                style="@style/textForm"
+                android:text="Mulai MUA Dari"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:gravity="center_vertical"
+                style="@style/textForm"
+                android:id="@+id/tvMuaSince"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/heightForm"
+                android:layout_marginTop="@dimen/marginForm"
+                android:drawablePadding="16dp"
+                android:ellipsize="end"
+                android:background="@drawable/bg_form"
+                android:hint="Tanggal Menjadi MUA"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/marginContent" />
+
+            <Button
+                android:layout_marginTop="@dimen/marginContentOut"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/fontForm"
+                android:layout_gravity="end"
+                android:layout_width="match_parent"
+                android:background="@drawable/button_primary"
+                android:layout_height="@dimen/heightForm"
+                android:id="@+id/btSave"
+                android:text="Simpan" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

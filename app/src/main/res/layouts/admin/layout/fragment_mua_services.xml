@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:clipToPadding="false"
+        android:padding="@dimen/marginScreen"
+        android:id="@+id/rvServices"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/marginScreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/fontForm"
+            android:layout_gravity="end"
+            android:layout_width="match_parent"
+            android:background="@drawable/button_primary"
+            android:layout_height="@dimen/heightForm"
+            android:id="@+id/btAddService"
+            android:text="TAMBAH SERVICE" />
+    </LinearLayout>
+
+</RelativeLayout>

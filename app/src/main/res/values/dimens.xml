@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fontHeader">20sp</dimen>
+    <dimen name="fontHeader1">25sp</dimen>
+    <dimen name="fontSubHeader">14sp</dimen>
+    <dimen name="fontContent">14sp</dimen>
+    <dimen name="fontIconHomepage">13sp</dimen>
+    <dimen name="fontIntroScreen600dp">24sp</dimen>
+    <dimen name="fontForm">16sp</dimen>
+    <dimen name="heightForm">45dp</dimen>
+
+
+    <dimen name="marginForm">10dp</dimen>
+    <dimen name="marginSubHeader">5dp</dimen>
+    <dimen name="marginScreen">20dp</dimen>
+    <dimen name="marginScreen600dp">40dp</dimen>
+    <dimen name="marginContent">15dp</dimen>
+    <dimen name="marginContentOut">30dp</dimen>
+    <dimen name="paddingServices">3dp</dimen>
+
+</resources>

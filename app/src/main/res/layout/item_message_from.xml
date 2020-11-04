@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"
+        android:text="12/12/12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvGroupDate"
+        android:layout_marginBottom="@dimen/marginSubHeader"
+        android:padding="10dp"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Terima kasih telah memberi respon"
+            android:maxWidth="300dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvChat"
+            android:background="@drawable/bg_message_form"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="@dimen/marginScreen"
+            android:layout_marginBottom="@dimen/marginSubHeader"
+            style="@style/textForm"
+            android:padding="10dp"/>
+        <LinearLayout
+            android:layout_below="@+id/tvChat"
+            android:layout_marginBottom="@dimen/marginContent"
+            android:layout_marginRight="@dimen/marginScreen"
+            android:orientation="horizontal"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginRight="@dimen/marginForm"
+                android:text="12:00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvDate" />
+            <ImageView
+                android:id="@+id/ivChatIcon"
+                android:src="@drawable/ic_chat_success"
+                android:layout_width="18dp"
+                android:layout_height="18dp"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

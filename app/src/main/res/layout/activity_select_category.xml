@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:padding="@dimen/marginScreen"
+    tools:context=".mua.SelectCategoryActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tvMakeUp"
+            android:layout_marginBottom="@dimen/marginSubHeader"
+            android:text="Make Up"
+            style="@style/textFormBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <View
+            android:layout_marginBottom="@dimen/marginContent"
+            android:background="@color/colorGray"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"/>
+
+        <TextView
+            android:id="@+id/tvHairDo"
+            android:layout_marginBottom="@dimen/marginSubHeader"
+            android:text="Hair Do"
+            style="@style/textFormBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <View
+            android:layout_marginBottom="@dimen/marginContent"
+            android:background="@color/colorGray"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"/>
+
+        <TextView
+            android:id="@+id/tvNail"
+            android:layout_marginBottom="@dimen/marginSubHeader"
+            android:text="Nail Art"
+            style="@style/textFormBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <View
+            android:layout_marginBottom="@dimen/marginContent"
+            android:background="@color/colorGray"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"/>
+
+        <TextView
+            android:id="@+id/tvHena"
+            android:layout_marginBottom="@dimen/marginSubHeader"
+            android:text="Hena Art"
+            style="@style/textFormBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <View
+            android:layout_marginBottom="@dimen/marginContent"
+            android:background="@color/colorGray"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"/>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

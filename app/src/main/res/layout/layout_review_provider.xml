@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginVertical="5dp"
+    android:layout_marginRight="@dimen/marginForm"
+    app:cardElevation="3dp"
+    app:cardCornerRadius="@dimen/marginForm"
+    app:contentPadding="@dimen/marginForm"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:ignore="MissingConstraints">
+            <LinearLayout
+                android:layout_marginLeft="@dimen/marginScreen"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvServices"
+                    style="@style/textForm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/marginForm"
+                    android:layout_marginBottom="@dimen/marginSubHeader"
+                    android:text="Paket Makeup Wisuda" />
+
+                <TextView
+                    android:layout_marginBottom="@dimen/marginSubHeader"
+                    android:id="@+id/tvNameUser"
+                    android:text="Rp 500.000"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:layout_marginBottom="@dimen/marginSubHeader"
+                    android:id="@+id/tvReview"
+                    android:text="Paket sudah termasuk ....."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <Button
+                    android:layout_marginTop="@dimen/marginForm"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/fontForm"
+                    android:layout_gravity="end"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/button_primary"
+                    android:layout_height="30dp"
+                    android:id="@+id/btSeeAll"
+                    android:textAllCaps="false"
+                    android:text="Lihat Semua" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+</androidx.cardview.widget.CardView>

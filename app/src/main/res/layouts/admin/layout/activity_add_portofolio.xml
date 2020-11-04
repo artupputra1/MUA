@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".mua.AddPortofolioActivity">
+
+    <LinearLayout
+        android:padding="@dimen/marginScreen"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--        <TextView-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_marginTop="@dimen/marginContent"-->
+        <!--            android:text="Kategori"-->
+        <!--            android:textColor="@color/colorBlack"-->
+        <!--            android:textSize="@dimen/fontForm" />-->
+
+        <!--        <RelativeLayout-->
+        <!--            android:layout_marginTop="@dimen/marginForm"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:background="@drawable/bg_form_white">-->
+        <!--            <Spinner-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="@dimen/heightForm"-->
+        <!--                android:id="@+id/spGender" />-->
+        <!--        </RelativeLayout>-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginContent"
+            android:text="Foto"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/fontForm" />
+
+        <ImageView
+            android:id="@+id/ivImage"
+            android:src="@color/colorPrimary"
+            android:layout_marginTop="@dimen/marginForm"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/marginScreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/fontForm"
+            android:layout_gravity="end"
+            android:layout_width="match_parent"
+            android:background="@drawable/button_primary"
+            android:layout_height="@dimen/heightForm"
+            android:id="@+id/btAddPortofolio"
+            android:text="TAMBAH PORTOFOLIO" />
+    </LinearLayout>
+
+</RelativeLayout>

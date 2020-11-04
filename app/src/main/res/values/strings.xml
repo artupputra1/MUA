@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Mua</string>
+    <string name="headerLogin">Selamat Datang, </string>
+    <string name="subHeaderLogin">Silahkan login untuk melanjutkan</string>
+    <string name="headerRegister">Registrasi Akun</string>
+    <string name="subHeaderRegister">Silahkan isi data dengan benar dan sesuai</string>
+    <string name="btLogin">Login</string>
+    <string name="guest">Masuk Sebagai Guest</string>
+    <string name="tvRegister">Belum Mempunyai Akun ? Register</string>
+    <!-- Form -->
+    <string name="tvUsername">Username </string>
+    <string name="edUsername">Masukkan Username </string>
+    <string name="tvPassword">Kata Sandi</string>
+    <string name="edPassword">Masukkan Kata Sandi</string>
+    <string name="tvName">Nama Lengkap (Sesuai e-KTP)</string>
+    <string name="edName">Masukkan Nama Lengkap</string>
+    <string name="tvEktp">No e-KTP</string>
+    <string name="edEktp">Masukkan Nomor e-KTP</string>
+    <string name="tvPhone">Nomor Ponsel</string>
+    <string name="edPhone">Masukkan No Ponsel</string>
+    <string name="tvEmail">Alamat Email</string>
+    <string name="edEmail">Masukkan Alamat Email</string>
+    <string name="tvPasswordCofirmation">Konfirmasi Kata Sandi</string>
+    <string name="edPasswordConfirmation">Ulangi Kata Sandi</string>
+    <string name="btRegister">Register</string>
+    <string name="cbConfirmation">Saya menyetujui seluruh Syarat dan Ketentuan dari Shariaways</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

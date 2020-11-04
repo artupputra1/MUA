@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+            <TextView
+                android:textColor="@color/colorWhite"
+                android:textAlignment="center"
+                android:textSize="30dp"
+                android:text="MARKETPLACE MUA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:padding="@dimen/marginScreen"
+            android:background="@drawable/bg_register"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_marginTop="@dimen/marginContentOut"
+                android:layout_gravity="center"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/fontHeader1"
+                android:textStyle="bold"
+                android:text="@string/headerLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:layout_marginTop="@dimen/marginSubHeader"
+                android:layout_gravity="center"
+                style="@style/textSubHeader"
+                android:text="@string/subHeaderRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                style="@style/textForm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="@string/tvUsername"
+                android:textColor="@color/colorBlack" />
+
+            <EditText
+                android:layout_marginTop="@dimen/marginForm"
+                android:id="@+id/edUsername"
+                android:paddingHorizontal="15dp"
+                android:background="@drawable/bg_form"
+                android:drawablePadding="16dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:hint="@string/edUsername"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/heightForm" />
+
+            <TextView
+                android:layout_marginTop="@dimen/marginContent"
+                style="@style/textForm"
+                android:text="@string/tvPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:layout_marginTop="@dimen/marginForm"
+                android:id="@+id/edPassword"
+                android:paddingHorizontal="15dp"
+                android:background="@drawable/bg_form"
+                android:drawablePadding="16dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:hint="@string/edPassword"
+                android:layout_width="match_parent"
+                android:password="true"
+                android:layout_height="@dimen/heightForm" />
+
+
+            <Button
+                android:layout_marginTop="@dimen/marginContentOut"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/fontForm"
+                android:layout_gravity="end"
+                android:layout_width="match_parent"
+                android:background="@drawable/button_primary"
+                android:layout_height="@dimen/heightForm"
+                android:id="@+id/btLogin"
+                android:text="@string/btLogin" />
+
+            <TextView
+                android:id="@+id/tvGuest"
+                android:layout_marginTop="@dimen/marginForm"
+                android:layout_gravity="center"
+                android:text="Masuk Sebagai Tamu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginBottom="15dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/tvRegister"
+        android:textAlignment="center"
+        android:textSize="@dimen/fontForm"
+        android:textColor="@color/colorBlack"
+        android:text="@string/tvRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

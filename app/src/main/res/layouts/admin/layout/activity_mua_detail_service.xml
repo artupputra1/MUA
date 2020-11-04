@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".mua.MuaDetailServiceActivity">
+
+    <LinearLayout
+        android:paddingHorizontal="@dimen/marginScreen"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginContentOut"
+            android:text="Harga Service"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/fontForm" />
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/marginForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:textSize="@dimen/fontForm"
+                android:layout_marginLeft="70dp"
+                android:numeric="integer"
+                android:id="@+id/edPrice"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/heightForm"
+                android:background="@drawable/bg_form_white_drawablestart"
+                android:hint="0"
+                android:maxLines="1"
+                android:paddingHorizontal="@dimen/marginContent" />
+
+            <TextView
+                android:gravity="center"
+                android:background="@drawable/bg_drawablestart"
+                style="@style/textForm"
+                android:layout_alignParentStart="true"
+                android:text="Rp"
+                android:layout_width="70dp"
+                android:layout_height="@dimen/heightForm"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginContent"
+            android:text="Nama Service"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/fontForm" />
+
+        <EditText
+            android:layout_marginTop="@dimen/marginForm"
+            android:textSize="@dimen/fontForm"
+            android:id="@+id/edService"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/heightForm"
+            android:background="@drawable/bg_form_white"
+            android:hint="Masukkan Nama Service"
+            android:maxLines="1"
+            android:paddingHorizontal="@dimen/marginContent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginContent"
+            android:text="Durasi"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/fontForm" />
+
+        <EditText
+            android:layout_marginTop="@dimen/marginForm"
+            android:textSize="@dimen/fontForm"
+            android:id="@+id/edDuration"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/heightForm"
+            android:background="@drawable/bg_form_white"
+            android:hint="Masukkan Informasi"
+            android:paddingHorizontal="@dimen/marginContent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginContent"
+            android:text="Informasi"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/fontForm" />
+
+        <EditText
+            android:layout_marginTop="@dimen/marginForm"
+            android:textSize="@dimen/fontForm"
+            android:id="@+id/edInformation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/heightForm"
+            android:background="@drawable/bg_form_white"
+            android:hint="Masukkan Informasi"
+            android:paddingHorizontal="@dimen/marginContent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/colorWhite"
+        android:padding="@dimen/marginScreen"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_marginBottom="@dimen/marginForm"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/fontForm"
+            android:layout_width="match_parent"
+            android:background="@drawable/button_primary"
+            android:layout_height="45dp"
+            android:id="@+id/btDelete"
+            android:text="HAPUS" />
+
+        <Button
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/fontForm"
+            android:layout_width="match_parent"
+            android:background="@drawable/button_primary"
+            android:layout_height="45dp"
+            android:id="@+id/btSave"
+            android:text="SIMPAN" />
+    </LinearLayout>
+
+
+</RelativeLayout>

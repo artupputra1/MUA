@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navHome"
+        android:icon="@drawable/ic_home"
+        android:title="Home" />
+    <item
+        android:id="@+id/navBooking"
+        android:icon="@drawable/ic_baseline_insert_drive_file_24"
+        android:title="Services" />
+    <item
+        android:id="@+id/navNotification"
+        android:icon="@drawable/ic_baseline_insert_drive_file_24"
+        android:title="Portofolio" />
+    <item
+        android:id="@+id/navAccount"
+        android:icon="@drawable/ic_account"
+        android:title="Account" />
+
+</menu>
