@@ -144,9 +144,9 @@ public class DetailProviderActivity extends AppCompatActivity {
                                     mua_name.setText(data.getString("name_business"));
                                     address.setText(data.getString("address"));
                                     job.setText(data.getString("Job_done"));
-                                    member_since.setText("No Telepon : "+data.getString("member_since"));
+                                    member_since.setText(data.getString("member_since"));
                                     mua_since.setText("Mulai MUA Dari : "+data.getString("mua_since"));
-                                    phone.setText(data.getString("phone"));
+                                    phone.setText("No Telepon : "+data.getString("phone"));
                                     note.setText(data.getString("info"));
                                 }
 
