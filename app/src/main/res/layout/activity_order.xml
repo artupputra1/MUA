@@ -163,6 +163,7 @@
                 android:text="Nomor HP " />
 
             <EditText
+                android:phoneNumber="true"
                 android:gravity="center_vertical"
                 style="@style/textForm"
                 android:id="@+id/edPhone"
@@ -190,6 +191,7 @@
                 android:text="Jumlah Orang " />
 
             <EditText
+                android:numeric="integer"
                 android:gravity="center_vertical"
                 style="@style/textForm"
                 android:id="@+id/edPerson"

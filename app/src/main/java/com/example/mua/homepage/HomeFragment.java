@@ -35,6 +35,7 @@ import org.json.JSONObject;
 
 public class HomeFragment extends Fragment {
 
+    // Deklrasi Variabel Yang Digunakan
     private static final String TAG = "HomeFragment";
     ProgressDialog progressDialog;
     LinearLayout make_up, hair_do, hena_art, nail_art;
@@ -56,6 +57,8 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View fragmentView = inflater.inflate(R.layout.fragment_home, container, false);
+
+        // Deklrasi layout
         make_up = fragmentView.findViewById(R.id.makeUp);
         hair_do = fragmentView.findViewById(R.id.hairDo);
         hena_art = fragmentView.findViewById(R.id.henaArt);
@@ -66,17 +69,22 @@ public class HomeFragment extends Fragment {
         bt_search = fragmentView.findViewById(R.id.btSearch);
         profil = fragmentView.findViewById(R.id.ivProfile);
 
+        // Mengambil id user dan nama user dari shared preference
         sharedpreferences = getActivity().getSharedPreferences(my_shared_preferences, Context.MODE_PRIVATE);
         id_user = sharedpreferences.getString("id", "");
         name_user = sharedpreferences.getString("name", "");
 
+        // Mengganti textview nama menjadi nama user
         tv_name.setText(name_user);
 
+        // Memanggil fungsi get_user.
         get_user();
 
+        // Click Listener
         bt_search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Pindah ke activity searchactivity dengan mengirim data keyword yang diambil dari ed_search
                 Intent intent = new Intent(getActivity(), SearchActivity.class);
                 intent.putExtra("keyword", ed_search.getText().toString());
                 startActivity(intent);
@@ -86,6 +94,7 @@ public class HomeFragment extends Fragment {
         iv_chat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Pindah ke activity ListChatActivity dengan mengirim data user_id
                 Intent intent = new Intent(getActivity(), ListChatActivity.class);
                 intent.putExtra("user_id", id_user);
                 startActivity(intent);
@@ -95,6 +104,7 @@ public class HomeFragment extends Fragment {
         make_up.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Pindah ke activity ProviderActivity dengan mengirim data category_id
                 Intent intent = new Intent(getActivity(), ProviderActivity.class);
                 intent.putExtra("category_id", "1");
                 startActivity(intent);
@@ -104,6 +114,7 @@ public class HomeFragment extends Fragment {
         hair_do.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Pindah ke activity ProviderActivity dengan mengirim data category_id
                 Intent intent = new Intent(getActivity(), ProviderActivity.class);
                 intent.putExtra("category_id", "2");
                 startActivity(intent);
@@ -113,6 +124,7 @@ public class HomeFragment extends Fragment {
         hena_art.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Pindah ke activity ProviderActivity dengan mengirim data category_id
                 Intent intent = new Intent(getActivity(), ProviderActivity.class);
                 intent.putExtra("category_id", "4");
                 startActivity(intent);
@@ -122,6 +134,7 @@ public class HomeFragment extends Fragment {
         nail_art.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Pindah ke activity ProviderActivity dengan mengirim data category_id
                 Intent intent = new Intent(getActivity(), ProviderActivity.class);
                 intent.putExtra("category_id", "3");
                 startActivity(intent);
@@ -131,8 +144,10 @@ public class HomeFragment extends Fragment {
         return fragmentView;
     }
 
+    // Fungsi get user
     public void get_user(){
         progressDialog = ProgressDialog.show(getActivity(),"Proses Login","Tunggu Sebentar. . .",false,false);
+        // Mengakses URL http://belajarkoding.xyz/mua/user/get_user.php dengan parameter user id
         AndroidNetworking.get("http://belajarkoding.xyz/mua/user/get_user.php")
                 .addQueryParameter("user_id", id_user)
                 .setPriority(Priority.LOW)
@@ -146,6 +161,7 @@ public class HomeFragment extends Fragment {
                             try {
                                 for (int i = 0; i < response.length(); i++) {
                                     JSONObject data = response.getJSONObject(i);
+                                    // Merubah foto profil user
                                     Picasso.get()
                                             .load("http://belajarkoding.xyz/mua/upload/profile/"+data.getString("image"))
                                             .fit()

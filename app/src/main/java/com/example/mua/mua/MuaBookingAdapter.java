@@ -35,7 +35,7 @@ public class MuaBookingAdapter extends RecyclerView.Adapter<MuaBookingAdapter.Vi
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         String status;
         final MuaBooking data = dataBooking.get(position);
-        holder.mMua.setText(data.getMua_name());
+        holder.mMua.setText(data.getCustomer_name());
         holder.mTanggal.setText("Tanggal Booking : " + data.getDate() + " / " + data.getTime());
         holder.mStatus.setText(data.getStatus());
         holder.mService.setText(data.getService_name());

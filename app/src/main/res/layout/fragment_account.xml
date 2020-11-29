@@ -158,7 +158,26 @@
                 android:layout_height="45dp"
                 android:id="@+id/btMua"
                 android:text="Masuk Sebagai MUA" />
+            <View
+                android:layout_marginTop="@dimen/marginContent"
+                android:background="@color/colorGray"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+            <TextView
+                android:layout_marginTop="@dimen/marginForm"
+                android:layout_marginHorizontal="@dimen/marginScreen"
+                android:text="Jika ada kendala atau komplain silahkan menghubungi alamat email dibawah ini"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                style="@style/textFormBold"
+                android:layout_marginTop="@dimen/marginSubHeader"
+                android:layout_marginHorizontal="@dimen/marginScreen"
+                android:text="komplain_mua@gmail.com"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
+
 
     </LinearLayout>
 

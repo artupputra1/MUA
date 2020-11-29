@@ -77,7 +77,7 @@ public class LoginActivity extends AppCompatActivity {
         // Koneksi dengan firebase
         db = FirebaseFirestore.getInstance();
 
-        // Klik listener, Ketika tombol
+        // Klik listener, Ketika tombol register ditekan maka pindah screen ke RegisterActivity
         tv_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -86,14 +86,17 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        // Klik listener, Ketika tulisan masuk sebagai guest diklik.
         tv_guest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Menyimpan data ke shared preference
                 SharedPreferences.Editor editor = sharedpreferences.edit();
                 editor.putString("id", "0");
                 editor.putString("username", "Tamu");
                 editor.putString("name", "Tamu");
                 editor.commit();
+                // Mengarahkan ke main acitivity
                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                 finish();
                 startActivity(intent);
@@ -103,9 +106,13 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+    // Fungsi Login
     public void proses_login(){
+        // Mengambil TOKEN FCM untuk push notif
         String token = sharedpreferences.getString("fcm_id", "");
+        // Menampilkan progress dialog
         progressDialog = ProgressDialog.show(LoginActivity.this,"Proses Login","Tunggu Sebentar. . .",false,false);
+        // Menagkses URL http://belajarkoding.xyz/mua/user/login.php dengan mengirim data username, password dan token fcm dengan metode post
         AndroidNetworking.post("http://belajarkoding.xyz/mua/user/login.php")
                 .addBodyParameter("username",ed_username.getText().toString())
                 .addBodyParameter("password",ed_password.getText().toString())
@@ -114,25 +121,32 @@ public class LoginActivity extends AppCompatActivity {
                 .build()
                 .getAsJSONObject(new JSONObjectRequestListener() {
                     @Override
+                    // Ketika ada response
                     public void onResponse(JSONObject response) {
                         progressDialog.dismiss();
                         try {
+                            // Ketika login success
                             if (response.get("success").toString().equals("1")) {
                                 Log.d(TAG, "onResponse: " + response);
-                                SharedPreferences.Editor editor = sharedpreferences.edit();
 
+                                // Mengedit shared preferences
+                                SharedPreferences.Editor editor = sharedpreferences.edit();
                                 editor.putString("id", response.get("id").toString());
                                 editor.putString("username", response.get("username").toString());
                                 editor.putString("name", response.get("username").toString());
                                 editor.commit();
 
-
+                                // Menambahkan user pada Firestore untuk fitur chat
                                 add_user_chat(response.get("id").toString(), response.get("username").toString());
+
+                                // Pindah activity
                                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                                 finish();
                                 startActivity(intent);
                             }
+                            // Jika gagal
                             else {
+                                // Muncul toast
                                 Toast.makeText(getApplicationContext() ,"Proses Login Gagal", Toast.LENGTH_LONG).show();
                             }
                         } catch (JSONException e) {
@@ -148,6 +162,7 @@ public class LoginActivity extends AppCompatActivity {
                 });
     }
 
+    // Fungsi tambah user pada firestore
     public void add_user_chat(String id, String name) {
         Map<String, Object> city = new HashMap<>();
         city.put("uid", id);

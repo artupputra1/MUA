@@ -20,8 +20,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Memanggil Fragment Home
         loadFragment(new HomeFragment());
 
+        // Deklrasi bottom navigation
         BottomNavigationView BNV = (BottomNavigationView) findViewById(R.id.bottomNavigation);
         BNV.setOnNavigationItemSelectedListener(botnav);
 
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             Fragment fragment = null;
+            // Pemilihan fragment yang akan dipanggil leh User
             switch (item.getItemId()){
                 case R.id.navHome:
                     fragment = new HomeFragment();
@@ -49,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+    // Fungsi Lod Fragment untuk menggantikan fragment awal dan fragment yang baru dipanggil
     private boolean loadFragment(Fragment fragment) {
         //switching fragment
         if (fragment != null) {

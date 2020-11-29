@@ -1,5 +1,7 @@
 package com.example.mua;
 
+
+// Model Search
 public class Search {
 
     String id;

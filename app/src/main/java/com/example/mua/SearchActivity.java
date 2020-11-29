@@ -37,7 +37,9 @@ public class SearchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
+
         keyword = getIntent().getStringExtra("keyword");
+
         recyclerView = findViewById(R.id.rvSearch);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
