@@ -40,6 +40,7 @@ public class BookingFragment extends Fragment {
     public static final String my_shared_preferences = "mua";
     String id_user;
     ProgressDialog progressDialog;
+    String status_booking;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -75,6 +76,12 @@ public class BookingFragment extends Fragment {
                             try {
                                 for (int i = 0; i < response.length(); i++) {
                                     JSONObject data = response.getJSONObject(i);
+                                    if(data.getString("status").equals("Dana Dicairkan")){
+                                        status_booking = "Selesai";
+                                    }
+                                    else {
+                                        status_booking = data.getString("status");
+                                    }
                                     dataBooking.add(new Booking(
                                             data.getString("id"),
                                             data.getString("service_id"),
@@ -89,7 +96,7 @@ public class BookingFragment extends Fragment {
                                             data.getString("address"),
                                             data.getString("total_price"),
                                             data.getString("payment_proof"),
-                                            data.getString("status")
+                                            status_booking
                                     ));
                                 }
 

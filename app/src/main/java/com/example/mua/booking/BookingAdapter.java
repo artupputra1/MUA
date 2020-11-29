@@ -65,6 +65,12 @@ public class BookingAdapter extends RecyclerView.Adapter<BookingAdapter.ViewHold
                     varIntent.putExtra("type", "2");
                     context.startActivity(varIntent);
                 }
+//                else if (data.getStatus().equals("Sedang Diproses")) {
+//                    Intent varIntent = new Intent(context, DetailBookingActivity.class);
+//                    varIntent.putExtra("booking_id", data.getId());
+//                    varIntent.putExtra("type", "2");
+//                    context.startActivity(varIntent);
+//                }
 
             }
         });

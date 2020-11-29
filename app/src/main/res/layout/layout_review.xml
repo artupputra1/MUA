@@ -27,13 +27,40 @@
                 android:background="@color/colorGray"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"/>
-            <TextView
-                android:id="@+id/tvReview"
-                android:layout_marginTop="@dimen/marginContent"
-                style="@style/textForm"
-                android:text="Isi Review"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/ivReview"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"/>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/marginContent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+                    <RatingBar
+                        android:id="@+id/rating"
+                        style="?android:attr/ratingBarStyleSmall"
+                        android:layout_marginTop="@dimen/marginForm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/tvReview"
+                        android:layout_marginTop="@dimen/marginContent"
+                        style="@style/textForm"
+                        android:text="Isi Review"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
 
         </LinearLayout>
 

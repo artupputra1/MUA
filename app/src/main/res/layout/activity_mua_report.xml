@@ -1,9 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
     tools:context=".mua.MuaReportActivity">
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <HorizontalScrollView
+            android:scrollbars="none"
+            android:padding="@dimen/marginForm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/btMakeup"
+                    android:paddingHorizontal="@dimen/marginForm"
+                    android:textAllCaps="false"
+                    android:text="Make Up"
+                    android:textColor="@color/colorPrimary"
+                    android:background="@drawable/button_secondary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </Button>
+                <Space
+                    android:layout_width="@dimen/marginContent"
+                    android:layout_height="wrap_content"/>
+                <Button
+                    android:id="@+id/btHairdo"
+                    android:paddingHorizontal="@dimen/marginForm"
+                    android:textAllCaps="false"
+                    android:text="Hair Do"
+                    android:textColor="@color/colorPrimary"
+                    android:background="@drawable/button_secondary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </Button>
+                <Space
+                    android:layout_width="@dimen/marginContent"
+                    android:layout_height="wrap_content"/>
+                <Button
+                    android:id="@+id/btNail"
+                    android:paddingHorizontal="@dimen/marginForm"
+                    android:textAllCaps="false"
+                    android:text="Nail Art"
+                    android:textColor="@color/colorPrimary"
+                    android:background="@drawable/button_secondary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </Button>
+                <Space
+                    android:layout_width="@dimen/marginContent"
+                    android:layout_height="wrap_content"/>
+                <Button
+                    android:id="@+id/btHena"
+                    android:paddingHorizontal="@dimen/marginForm"
+                    android:textAllCaps="false"
+                    android:text="Hena Art"
+                    android:textColor="@color/colorPrimary"
+                    android:background="@drawable/button_secondary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </Button>
+            </LinearLayout>
+        </HorizontalScrollView>
+        <TextView
+            android:layout_marginTop="@dimen/marginContent"
+            android:layout_marginHorizontal="@dimen/marginScreen"
+            style="@style/textHeader"
+            android:text="Statistik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <androidx.recyclerview.widget.RecyclerView
+            tools:listitem="@layout/layout_report"
+            android:padding="@dimen/marginScreen"
+            android:clipToPadding="false"
+            android:id="@+id/rvReport"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"/>
+        <TextView
+            android:layout_marginTop="@dimen/marginContent"
+            android:layout_marginHorizontal="@dimen/marginScreen"
+            style="@style/textHeader"
+            android:text="Review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <androidx.recyclerview.widget.RecyclerView
+            tools:listitem="@layout/layout_review"
+            android:padding="@dimen/marginScreen"
+            android:clipToPadding="false"
+            android:id="@+id/rvReview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

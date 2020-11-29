@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,6 +16,7 @@ import com.example.mua.R;
 import com.example.mua.booking.Booking;
 import com.example.mua.booking.DetailBookingActivity;
 import com.example.mua.booking.UploadTransactionActivity;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -40,6 +43,11 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ViewHolder
         final Review data = dataReview.get(position);
         holder.mName.setText(data.getUser_name());
         holder.mReview.setText(data.getReview());
+        holder.mRating.setRating(Float.parseFloat(data.getRating()));
+        Picasso.get()
+                .load("http://belajarkoding.xyz/mua/upload/review/"+data.image)
+                .fit()
+                .into(holder.mImage);
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,12 +65,15 @@ public class ReviewAdapter extends RecyclerView.Adapter<ReviewAdapter.ViewHolder
     public class ViewHolder extends RecyclerView.ViewHolder{
 
         TextView mName, mReview;
+        RatingBar mRating;
+        ImageView mImage;
 
         public ViewHolder(View itemView) {
             super(itemView);
             mName = itemView.findViewById(R.id.tvUser);
             mReview = itemView.findViewById(R.id.tvReview);
-
+            mRating = itemView.findViewById(R.id.rating);
+            mImage = itemView.findViewById(R.id.ivReview);
         }
     }
 }

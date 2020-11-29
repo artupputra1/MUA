@@ -29,6 +29,7 @@ public class MuaDetailServiceActivity extends AppCompatActivity {
 
     String TAG = "MuaDetailServiceActivity";
     Button bt_save, bt_delete;
+    TextView tv_review;
     EditText tv_price, tv_name, tv_information, tv_duration;
     ProgressDialog progressDialog;
     String service_id;
@@ -57,6 +58,15 @@ public class MuaDetailServiceActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 delete();
+            }
+        });
+
+        tv_review.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MuaDetailServiceActivity.this, MuaReviewActivity.class);
+                intent.putExtra("service_id", service_id);
+                startActivity(intent);
             }
         });
 
@@ -175,6 +185,7 @@ public class MuaDetailServiceActivity extends AppCompatActivity {
         tv_duration = findViewById(R.id.edDuration);
         bt_save = findViewById(R.id.btSave);
         bt_delete = findViewById(R.id.btDelete);
+        tv_review = findViewById(R.id.tvReview);
     }
 
 }

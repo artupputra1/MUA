@@ -19,222 +19,239 @@
             android:layout_width="100dp"
             android:layout_height="100dp"/>
 
-        <LinearLayout
-            android:layout_marginTop="50dp"
+        <ScrollView
             android:background="@drawable/bg_register"
-            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
             <LinearLayout
-                android:layout_marginTop="60dp"
-                android:layout_marginBottom="@dimen/marginForm"
-                android:layout_marginHorizontal="@dimen/marginScreen"
+                android:layout_marginTop="50dp"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    style="@style/textForm"
-                    android:text="Owner"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    style="@style/textForm"
-                    android:layout_marginRight="@dimen/marginForm"
-                    android:text=":"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    android:id="@+id/tvOwner"
-                    style="@style/textForm"
-                    android:text="Owner"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"/>
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_marginTop="60dp"
+                    android:layout_marginBottom="@dimen/marginForm"
+                    android:layout_marginHorizontal="@dimen/marginScreen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        style="@style/textForm"
+                        android:text="Owner"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        style="@style/textForm"
+                        android:layout_marginRight="@dimen/marginForm"
+                        android:text=":"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/tvOwner"
+                        style="@style/textForm"
+                        android:text="Owner"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/marginForm"
+                    android:layout_marginHorizontal="@dimen/marginScreen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        style="@style/textForm"
+                        android:text="Nama MUA"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        style="@style/textForm"
+                        android:layout_marginRight="@dimen/marginForm"
+                        android:text=":"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/tvMua"
+                        style="@style/textForm"
+                        android:text="Nama MUA"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/marginForm"
+                    android:layout_marginHorizontal="@dimen/marginScreen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        style="@style/textForm"
+                        android:text="Alamat"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        style="@style/textForm"
+                        android:layout_marginRight="@dimen/marginForm"
+                        android:text=":"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/tvAddress"
+                        style="@style/textForm"
+                        android:text="Address"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/marginForm"
+                    android:layout_marginHorizontal="@dimen/marginScreen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        style="@style/textForm"
+                        android:text="Mulai MUA dari"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        style="@style/textForm"
+                        android:layout_marginRight="@dimen/marginForm"
+                        android:text=":"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/tvMuaSince"
+                        style="@style/textForm"
+                        android:text="Address"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/marginForm"
+                    android:layout_marginHorizontal="@dimen/marginScreen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        style="@style/textForm"
+                        android:text="Tanggal Pendaftaran"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        style="@style/textForm"
+                        android:layout_marginRight="@dimen/marginForm"
+                        android:text=":"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/tvMemberSince"
+                        style="@style/textForm"
+                        android:text="Tanggaal Pendaftaran"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/marginForm"
+                    android:layout_marginHorizontal="@dimen/marginScreen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        style="@style/textForm"
+                        android:text="Pekerjaan Diselesaikan"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        style="@style/textForm"
+                        android:layout_marginRight="@dimen/marginForm"
+                        android:text=":"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/tvJobDone"
+                        style="@style/textForm"
+                        android:text="Pekerjaan Diselesaikan"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginBottom="@dimen/marginForm"
+                    android:layout_marginHorizontal="@dimen/marginScreen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        style="@style/textForm"
+                        android:text="Note"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        style="@style/textForm"
+                        android:layout_marginRight="@dimen/marginForm"
+                        android:text=":"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/tvInfo"
+                        style="@style/textForm"
+                        android:text="Address"
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <Button
+                    android:layout_marginHorizontal="@dimen/marginScreen"
+                    android:layout_marginTop="@dimen/marginContentOut"
+                    android:layout_marginBottom="@dimen/marginForm"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/fontForm"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/button_disabled"
+                    android:layout_height="45dp"
+                    android:id="@+id/btEdit"
+                    android:text="Edit Profil" />
+                <Button
+                    android:layout_marginHorizontal="@dimen/marginScreen"
+                    android:layout_marginBottom="@dimen/marginForm"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/fontForm"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/button_disabled"
+                    android:layout_height="45dp"
+                    android:id="@+id/btReport"
+                    android:text="Laporan" />
+                <Button
+                    android:layout_marginHorizontal="@dimen/marginScreen"
+                    android:layout_alignParentBottom="true"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/fontForm"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/button_primary"
+                    android:layout_height="45dp"
+                    android:id="@+id/btUser"
+                    android:text="Masuk Sebagai USER" />
+
+
+
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_marginBottom="@dimen/marginForm"
-                android:layout_marginHorizontal="@dimen/marginScreen"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    style="@style/textForm"
-                    android:text="Nama MUA"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    style="@style/textForm"
-                    android:layout_marginRight="@dimen/marginForm"
-                    android:text=":"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    android:id="@+id/tvMua"
-                    style="@style/textForm"
-                    android:text="Nama MUA"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
+        </ScrollView>
 
-            <LinearLayout
-                android:layout_marginBottom="@dimen/marginForm"
-                android:layout_marginHorizontal="@dimen/marginScreen"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    style="@style/textForm"
-                    android:text="Alamat"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    style="@style/textForm"
-                    android:layout_marginRight="@dimen/marginForm"
-                    android:text=":"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    android:id="@+id/tvAddress"
-                    style="@style/textForm"
-                    android:text="Address"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_marginBottom="@dimen/marginForm"
-                android:layout_marginHorizontal="@dimen/marginScreen"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    style="@style/textForm"
-                    android:text="Mulai MUA dari"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    style="@style/textForm"
-                    android:layout_marginRight="@dimen/marginForm"
-                    android:text=":"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    android:id="@+id/tvMuaSince"
-                    style="@style/textForm"
-                    android:text="Address"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_marginBottom="@dimen/marginForm"
-                android:layout_marginHorizontal="@dimen/marginScreen"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    style="@style/textForm"
-                    android:text="Tanggal Pendaftaran"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    style="@style/textForm"
-                    android:layout_marginRight="@dimen/marginForm"
-                    android:text=":"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    android:id="@+id/tvMemberSince"
-                    style="@style/textForm"
-                    android:text="Tanggaal Pendaftaran"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_marginBottom="@dimen/marginForm"
-                android:layout_marginHorizontal="@dimen/marginScreen"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    style="@style/textForm"
-                    android:text="Pekerjaan Diselesaikan"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    style="@style/textForm"
-                    android:layout_marginRight="@dimen/marginForm"
-                    android:text=":"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    android:id="@+id/tvJobDone"
-                    style="@style/textForm"
-                    android:text="Pekerjaan Diselesaikan"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_marginBottom="@dimen/marginForm"
-                android:layout_marginHorizontal="@dimen/marginScreen"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    style="@style/textForm"
-                    android:text="Note"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    style="@style/textForm"
-                    android:layout_marginRight="@dimen/marginForm"
-                    android:text=":"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    android:id="@+id/tvInfo"
-                    style="@style/textForm"
-                    android:text="Address"
-                    android:layout_weight="1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
-
-            <Button
-                android:layout_marginHorizontal="@dimen/marginScreen"
-                android:layout_marginTop="@dimen/marginContentOut"
-                android:layout_marginBottom="@dimen/marginForm"
-                android:layout_alignParentBottom="true"
-                android:textColor="@color/colorPrimary"
-                android:textSize="@dimen/fontForm"
-                android:layout_width="match_parent"
-                android:background="@drawable/button_disabled"
-                android:layout_height="45dp"
-                android:id="@+id/btEdit"
-                android:text="Edit Profil" />
-            <Button
-                android:layout_marginHorizontal="@dimen/marginScreen"
-                android:layout_alignParentBottom="true"
-                android:textColor="@color/colorWhite"
-                android:textSize="@dimen/fontForm"
-                android:layout_width="match_parent"
-                android:background="@drawable/button_primary"
-                android:layout_height="45dp"
-                android:id="@+id/btUser"
-                android:text="Masuk Sebagai USER" />
-
-
-
-        </LinearLayout>
 
     </LinearLayout>
 

@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".chat.MuaMessageActivity"></activity>
+        <activity android:name=".mua.MuaReportActivity"></activity>
+        <activity android:name=".mua.MuaReviewActivity" />
+        <activity android:name=".CancelBookingActivity" />
+        <activity android:name=".chat.MuaMessageActivity" />
         <activity android:name=".mua.notif.MuaNotifActivity" />
         <activity android:name=".chat.MuaListChatActivity" />
         <activity android:name=".mua.EditMuaActivity" />

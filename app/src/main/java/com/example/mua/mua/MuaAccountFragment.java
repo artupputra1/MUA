@@ -34,7 +34,7 @@ public class MuaAccountFragment extends Fragment {
 
     private static final String TAG = "AccountFragment";
     TextView tv_owner, tv_name, tv_address, tv_since, tv_jobdone, tv_muasince, tv_note;
-    Button bt_user, bt_edit;
+    Button bt_user, bt_edit, bt_report;
     ImageView profil;
     ProgressDialog progressDialog;
     String provider_id;
@@ -55,6 +55,7 @@ public class MuaAccountFragment extends Fragment {
         tv_note = fragmentView.findViewById(R.id.tvInfo);
         bt_user = fragmentView.findViewById(R.id.btUser);
         bt_edit = fragmentView.findViewById(R.id.btEdit);
+        bt_report = fragmentView.findViewById(R.id.btReport);
         profil = fragmentView.findViewById(R.id.ivProfile);
 
         sharedpreferences = this.getActivity().getSharedPreferences(my_shared_preferences, Context.MODE_PRIVATE);
@@ -73,6 +74,13 @@ public class MuaAccountFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        bt_report.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), MuaReportActivity.class);
                 startActivity(intent);
             }
         });

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhite"
+    android:orientation="vertical"
     tools:context=".provider.detail_provider.PortofolioProviderActivity">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -11,7 +12,8 @@
         android:padding="@dimen/marginScreen"
         android:id="@+id/rvPortofolio"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
 
 
     <LinearLayout
@@ -30,4 +32,4 @@
             android:text="TAMBAH PORTOFOLIO" />
     </LinearLayout>
 
-</RelativeLayout>
+</LinearLayout>

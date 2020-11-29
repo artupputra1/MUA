@@ -72,7 +72,9 @@ public class ReviewActivity extends AppCompatActivity {
                                             data.getString("service_id"),
                                             data.getString("user_id"),
                                             data.getString("name"),
-                                            data.getString("review")
+                                            data.getString("review"),
+                                            data.getString("rating"),
+                                            data.getString("image")
                                     ));
                                 }
 

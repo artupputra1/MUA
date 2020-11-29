@@ -52,16 +52,21 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        // Mengganti Judul Pada AppBar
         ActionBar actionBar = getSupportActionBar();
         getSupportActionBar().setTitle("Login");
 
+        // Deklarasi Shared Preference
         sharedpreferences = getSharedPreferences(my_shared_preferences, Context.MODE_PRIVATE);
+
+        // Init View, Deklarasi komponen pada layout
         ed_username = findViewById(R.id.edUsername);
         ed_password = findViewById(R.id.edPassword);
         bt_login = findViewById(R.id.btLogin);
         tv_register = findViewById(R.id.tvRegister);
         tv_guest = findViewById(R.id.tvGuest);
 
+        // Click Listener, Ketika tombol bt_login ditekan maka menjalankan fungsi prose_login
         bt_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,8 +74,10 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        // Koneksi dengan firebase
         db = FirebaseFirestore.getInstance();
 
+        // Klik listener, Ketika tombol
         tv_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

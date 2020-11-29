@@ -70,7 +70,7 @@ public class MuaDetailPortofolioActivity extends AppCompatActivity {
                                 if (response.get("success").toString().equals("1")) {
                                     Log.d(TAG, "onResponse: " + response);
                                     Toast.makeText(getApplicationContext() ,"Proses Register Berhasil", Toast.LENGTH_LONG).show();
-                                    Intent intent = new Intent(MuaDetailPortofolioActivity.this, LoginActivity.class);
+                                    Intent intent = new Intent(MuaDetailPortofolioActivity.this, MenuMuaActivity.class);
                                     finish();
                                     startActivity(intent);
                                 }

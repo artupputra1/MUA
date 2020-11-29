@@ -172,7 +172,6 @@
                             </LinearLayout>
 
                             <androidx.recyclerview.widget.RecyclerView
-                                android:nestedScrollingEnabled="false"
                                 android:clipToPadding="false"
                                 android:padding="@dimen/marginScreen"
                                 android:id="@+id/rvServices"

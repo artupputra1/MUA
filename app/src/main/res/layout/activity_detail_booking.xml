@@ -179,15 +179,35 @@
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <Button
-            android:textColor="@color/colorWhite"
-            android:textSize="@dimen/fontForm"
-            android:layout_gravity="end"
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:background="@drawable/button_primary"
-            android:layout_height="@dimen/heightForm"
-            android:id="@+id/btDone"
-            android:text="SELESAI" />
+            android:layout_height="wrap_content">
+            <Button
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/fontForm"
+                android:layout_gravity="end"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_secondary"
+                android:layout_height="@dimen/heightForm"
+                android:id="@+id/btCancel"
+                android:text="BATALKAN" />
+            <Space
+                android:layout_width="@dimen/marginForm"
+                android:layout_height="wrap_content"/>
+            <Button
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/fontForm"
+                android:layout_gravity="end"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_primary"
+                android:layout_height="@dimen/heightForm"
+                android:id="@+id/btDone"
+                android:text="SELESAI" />
+        </LinearLayout>
+
     </LinearLayout>
 
 

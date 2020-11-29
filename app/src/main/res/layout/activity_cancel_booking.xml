@@ -1,9 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:padding="@dimen/marginScreen"
     tools:context=".CancelBookingActivity">
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <TextView
+            style="@style/textFormBold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginForm"
+            android:text="Alasan Pembatalan " />
+        <EditText
+            android:gravity="center_vertical"
+            style="@style/textForm"
+            android:id="@+id/edReason"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginForm"
+            android:drawablePadding="16dp"
+            android:ellipsize="end"
+            android:background="@drawable/bg_form"
+            android:hint="Masukkan Alasan"
+            android:lines="5"
+            android:paddingHorizontal="@dimen/marginContent" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/fontForm"
+            android:layout_gravity="end"
+            android:layout_width="match_parent"
+            android:background="@drawable/button_primary"
+            android:layout_height="@dimen/heightForm"
+            android:id="@+id/btSubmit"
+            android:textAllCaps="false"
+            android:text="Submit" />
+    </LinearLayout>
+</LinearLayout>

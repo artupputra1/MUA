@@ -37,7 +37,7 @@ public class MuaServiceProviderAdapter extends RecyclerView.Adapter<MuaServicePr
         holder.mService.setText(data.getService());
         holder.mPrice.setText("Harga : " + data.getPrice());
         holder.mInformation.setText(data.getInformation());
-        holder.mDuration.setText(data.getDuration());
+        holder.mDuration.setText("Durasi : " + data.getDuration());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

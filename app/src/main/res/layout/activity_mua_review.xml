@@ -6,4 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".mua.MuaReviewActivity">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:padding="@dimen/marginScreen"
+        android:clipToPadding="false"
+        android:id="@+id/rvReview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

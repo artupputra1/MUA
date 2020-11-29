@@ -7,14 +7,18 @@ public class Review {
     String user_id;
     String user_name;
     String review;
+    String rating;
+    String image;
 
 
-    public Review(String id, String service_id, String user_id, String user_name, String review) {
+    public Review(String id, String service_id, String user_id, String user_name, String review, String rating, String image) {
         this.id = id;
         this.service_id = service_id;
         this.user_id = user_id;
         this.user_name = user_name;
         this.review = review;
+        this.rating = rating;
+        this.image = image;
     }
 
     public String getId() {
@@ -55,5 +59,21 @@ public class Review {
 
     public void setReview(String review) {
         this.review = review;
+    }
+
+    public String getRating() {
+        return rating;
+    }
+
+    public void setRating(String rating) {
+        this.rating = rating;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }

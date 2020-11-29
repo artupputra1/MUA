@@ -71,12 +71,12 @@ public class MuaRegisterActivity extends AppCompatActivity {
                         try {
                             if (response.get("success").toString().equals("1")) {
                                 Log.d(TAG, "onResponse: " + response);
-//                                SharedPreferences.Editor editor = sharedpreferences.edit();
-//                                editor.putString("id_provider", response.get("last_id").toString());
-//                                editor.commit();
+                                SharedPreferences.Editor editor = sharedpreferences.edit();
+                                editor.putString("id_provider", response.get("last_id").toString());
+                                editor.commit();
 
-                                Intent intent = new Intent(MuaRegisterActivity.this, MainActivity.class);
-                                finish();
+                                Intent intent = new Intent(MuaRegisterActivity.this, MenuMuaActivity.class);
+                                intent.putExtra("id_mua",response.get("last_id").toString());
                                 startActivity(intent);
                             }
                             else {

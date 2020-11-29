@@ -19,8 +19,10 @@ import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONArrayRequestListener;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
+import com.example.mua.CancelBookingActivity;
 import com.example.mua.MainActivity;
 import com.example.mua.R;
+import com.example.mua.review.AddReviewActivity;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -34,9 +36,10 @@ public class DetailBookingActivity extends AppCompatActivity {
     TextView tv_service, tv_price, tv_information, tv_date, tv_time, tv_customer, tv_phone, tv_person, tv_address;
     private String booking_id, date, time, customer, phone, person, address;
     LinearLayout linear_button;
-    Button bt_done;
+    Button bt_done, bt_cancel;
     ProgressDialog progressDialog ;
     String type;
+    String service_id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +57,15 @@ public class DetailBookingActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 done();
+            }
+        });
+
+        bt_cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent varIntent = new Intent(DetailBookingActivity.this, CancelBookingActivity.class);
+                varIntent.putExtra("booking_id", booking_id);
+                startActivity(varIntent);
             }
         });
 
@@ -79,6 +91,7 @@ public class DetailBookingActivity extends AppCompatActivity {
                             try {
                                 for (int i = 0; i < response.length(); i++) {
                                     JSONObject data = response.getJSONObject(i);
+                                    service_id = data.getString("service_id");
                                     tv_service.setText(data.getString("service"));
                                     tv_information.setText(data.getString("information"));
                                     tv_date.setText(data.getString("date"));
@@ -113,7 +126,8 @@ public class DetailBookingActivity extends AppCompatActivity {
                             if (response.get("success").toString().equals("1")) {
                                 Log.d(TAG, "onResponse: " + response);
                                 Toast.makeText(getApplicationContext() ,"Pesanan Selesai", Toast.LENGTH_LONG).show();
-                                Intent intent = new Intent(DetailBookingActivity.this, MainActivity.class);
+                                Intent intent = new Intent(DetailBookingActivity.this, AddReviewActivity.class);
+                                intent.putExtra("service_id", service_id);
                                 finish();
                                 startActivity(intent);
                             }
@@ -145,6 +159,7 @@ public class DetailBookingActivity extends AppCompatActivity {
         tv_person = findViewById(R.id.tvPerson);
         tv_address = findViewById(R.id.tvAddress);
         bt_done = findViewById(R.id.btDone);
+        bt_cancel = findViewById(R.id.btCancel);
         linear_button = findViewById(R.id.linearDone);
     }
 }
