@@ -26,11 +26,15 @@ import android.widget.Toast;
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
+import com.androidnetworking.interfaces.JSONArrayRequestListener;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
+import com.example.mua.LoginActivity;
 import com.example.mua.MainActivity;
 import com.example.mua.OrderSummaryActivity;
 import com.example.mua.R;
+import com.squareup.picasso.Picasso;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -45,7 +49,7 @@ public class AddReviewActivity extends AppCompatActivity {
     RatingBar rating;
     ProgressDialog progressDialog;
     ImageView iv_review;
-    String service_id, id_user;
+    String service_id, id_user, order_id;
     SharedPreferences sharedpreferences;
     public static final String my_shared_preferences = "mua";
     Bitmap FixBitmap;
@@ -61,6 +65,7 @@ public class AddReviewActivity extends AppCompatActivity {
         sharedpreferences = getSharedPreferences(my_shared_preferences, Context.MODE_PRIVATE);
         id_user = sharedpreferences.getString("id", "");
         service_id = getIntent().getStringExtra("service_id");
+        order_id = getIntent().getStringExtra("order_id");
         bt_save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -73,6 +78,8 @@ public class AddReviewActivity extends AppCompatActivity {
                 showPictureDialog();
             }
         });
+
+        get_review();
 
     }
 
@@ -95,6 +102,7 @@ public class AddReviewActivity extends AppCompatActivity {
         progressDialog = ProgressDialog.show(AddReviewActivity.this,"Proses","Tunggu Sebentar. . .",false,false);
         AndroidNetworking.post("http://belajarkoding.xyz/mua/user/add_review.php")
                 .addBodyParameter("service_id", service_id)
+                .addBodyParameter("order_id", order_id)
                 .addBodyParameter("user_id", id_user)
                 .addBodyParameter("review", ed_review.getText().toString())
                 .addBodyParameter("rating", String.valueOf(rating.getRating()))
@@ -107,6 +115,56 @@ public class AddReviewActivity extends AppCompatActivity {
                         progressDialog.dismiss();
                         try {
                             Toast.makeText(AddReviewActivity.this,response.getString("message"),Toast.LENGTH_LONG).show();
+                            Intent intent = new Intent(AddReviewActivity.this, MainActivity.class);
+                            finish();
+                            startActivity(intent);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+
+                    @Override
+                    public void onError(ANError error) {
+                        progressDialog.dismiss();
+                        Log.d(TAG, "onError: " + error);
+                    }
+                });
+    }
+
+    public void get_review(){
+        String token = sharedpreferences.getString("fcm_id", "");
+        // Menampilkan progress dialog
+        progressDialog = ProgressDialog.show(AddReviewActivity.this,"Proses","Tunggu Sebentar. . .",false,false);
+        // Menagkses URL http://belajarkoding.xyz/mua/user/cek_review.php dengan mengirim data order_id dan user_id
+        AndroidNetworking.post("http://belajarkoding.xyz/mua/user/cek_review.php")
+                .addBodyParameter("order_id",order_id)
+                .addBodyParameter("user_id",id_user)
+                .setPriority(Priority.LOW)
+                .build()
+                .getAsJSONObject(new JSONObjectRequestListener() {
+                    @Override
+                    // Ketika ada response
+                    public void onResponse(JSONObject response) {
+                        progressDialog.dismiss();
+                        try {
+                            // Ketika success
+                            if (response.get("success").toString().equals("1")) {
+                                ed_review.setText(response.get("review").toString());
+                                ed_review.setEnabled(false);
+                                rating.setRating(Float.parseFloat(response.get("rating").toString()));
+                                rating.setEnabled(false);
+                                Picasso.get()
+                                        .load("http://belajarkoding.xyz/mua/upload/review/"+response.get("image").toString())
+                                        .fit()
+                                        .into(iv_review);
+                                select_image.setVisibility(View.GONE);
+                                bt_save.setVisibility(View.GONE);
+
+                            }
+                            // Jika gagal
+                            else {
+
+                            }
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }

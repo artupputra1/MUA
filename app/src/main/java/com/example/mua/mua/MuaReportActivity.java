@@ -78,6 +78,7 @@ public class MuaReportActivity extends AppCompatActivity {
         bt_makeup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                dataReview.clear();
                 resetButton();
                 bt_makeup.setBackgroundResource(R.drawable.button_primary);
                 bt_makeup.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
@@ -91,6 +92,7 @@ public class MuaReportActivity extends AppCompatActivity {
         bt_hairdo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                dataReview.clear();
                 resetButton();
                 bt_hairdo.setBackgroundResource(R.drawable.button_primary);
                 bt_hairdo.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
@@ -104,6 +106,7 @@ public class MuaReportActivity extends AppCompatActivity {
         bt_hena.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                dataReview.clear();
                 resetButton();
                 bt_hena.setBackgroundResource(R.drawable.button_primary);
                 bt_hena.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));
@@ -117,6 +120,7 @@ public class MuaReportActivity extends AppCompatActivity {
         bt_nail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                dataReview.clear();
                 resetButton();
                 bt_nail.setBackgroundResource(R.drawable.button_primary);
                 bt_nail.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.colorWhite));

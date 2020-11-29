@@ -51,6 +51,7 @@ public class BookingAdapter extends RecyclerView.Adapter<BookingAdapter.ViewHold
                 else if (data.getStatus().equals("Selesai")){
                     Intent varIntent = new Intent(context, AddReviewActivity.class);
                     varIntent.putExtra("service_id", data.getService_id());
+                    varIntent.putExtra("order_id", data.getId());
                     context.startActivity(varIntent);
                 }
                 else if (data.getStatus().equals("Menunggu Konfirmasi")) {

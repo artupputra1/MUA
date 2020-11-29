@@ -160,6 +160,6 @@ public class DetailBookingActivity extends AppCompatActivity {
         tv_address = findViewById(R.id.tvAddress);
         bt_done = findViewById(R.id.btDone);
         bt_cancel = findViewById(R.id.btCancel);
-        linear_button = findViewById(R.id.linearDone);
+        linear_button = findViewById(R.id.linearButton);
     }
 }
