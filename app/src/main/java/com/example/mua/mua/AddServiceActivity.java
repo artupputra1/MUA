@@ -68,7 +68,7 @@ public class AddServiceActivity extends AppCompatActivity {
                 .addBodyParameter("service",tv_name.getText().toString())
                 .addBodyParameter("price",tv_price.getText().toString())
                 .addBodyParameter("information",tv_information.getText().toString())
-                .addBodyParameter("duration",tv_information.getText().toString())
+                .addBodyParameter("duration",tv_duration.getText().toString())
                 .setPriority(Priority.LOW)
                 .build()
                 .getAsJSONObject(new JSONObjectRequestListener() {

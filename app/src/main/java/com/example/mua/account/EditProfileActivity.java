@@ -113,13 +113,13 @@ public class EditProfileActivity extends AppCompatActivity {
                         try {
                             if (response.get("success").toString().equals("1")) {
                                 Log.d(TAG, "onResponse: " + response);
-                                Toast.makeText(getApplicationContext() ,"Proses Update Service Berhasil", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext() ,"Proses Update Berhasil", Toast.LENGTH_LONG).show();
                                 Intent intent = new Intent(EditProfileActivity.this, MainActivity.class);
                                 finish();
                                 startActivity(intent);
                             }
                             else {
-                                Toast.makeText(getApplicationContext() ,"Proses Update Service Gagal", Toast.LENGTH_LONG).show();
+                                Toast.makeText(getApplicationContext() ,"Proses Update Gagal", Toast.LENGTH_LONG).show();
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
