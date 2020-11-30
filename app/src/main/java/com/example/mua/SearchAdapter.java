@@ -27,11 +27,13 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
 
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        // Deklarasi layout yang digunakan
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_search, parent, false);
         ViewHolder holder = new ViewHolder(v);
         return holder;
     }
 
+    // Untuk menampilkan data ke layout
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         final Search data = dataSearch.get(position);
@@ -58,6 +60,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
 
     public class ViewHolder extends RecyclerView.ViewHolder{
 
+        // Koneksi ke layout
         TextView mService, mPrice, mInformation, mMua;
 
         public ViewHolder(View itemView) {
