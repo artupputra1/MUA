@@ -83,7 +83,7 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/heightForm"
             android:background="@drawable/bg_form_white"
-            android:hint="Masukkan Informasi"
+            android:hint="Masukkan Jam Durasi"
             android:paddingHorizontal="@dimen/marginContent" />
 
         <TextView

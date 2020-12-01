@@ -61,15 +61,6 @@ public class MuaDetailServiceActivity extends AppCompatActivity {
             }
         });
 
-        tv_review.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MuaDetailServiceActivity.this, MuaReviewActivity.class);
-                intent.putExtra("service_id", service_id);
-                startActivity(intent);
-            }
-        });
-
     }
 
     public void get_services(){
