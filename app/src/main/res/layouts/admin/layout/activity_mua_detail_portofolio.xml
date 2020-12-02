@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/colorWhite"
-    tools:context=".mua.MuaDetailPortofolioActivity">
+    tools:context=".mua.portofolio.MuaDetailPortofolioActivity">
 
     <ImageView
         android:id="@+id/ivPortofolio"

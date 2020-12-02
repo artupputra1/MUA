@@ -1,4 +1,4 @@
-package com.example.mua.mua;
+package com.example.mua.mua.service;
 
 import android.content.Context;
 import android.content.Intent;

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/colorWhite"
-    tools:context=".mua.MuaReportActivity">
+    tools:context=".mua.account.MuaReportActivity">
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"

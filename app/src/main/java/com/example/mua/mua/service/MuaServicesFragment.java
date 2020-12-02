@@ -1,4 +1,4 @@
-package com.example.mua.mua;
+package com.example.mua.mua.service;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -29,28 +29,30 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MuaPortofolioFragment extends Fragment {
 
-    private static final String TAG = "PortofolioFragment";
-    private List<MuaPortofolioProvider> dataPortofolio;
+public class MuaServicesFragment extends Fragment {
+
+
+    private static final String TAG = "ServiceFragment";
+    private List<MuaServiceProvider> dataProvider;
     private RecyclerView recyclerView;
     SharedPreferences sharedpreferences;
     public static final String my_shared_preferences = "mua";
     String provider_id;
     ProgressDialog progressDialog;
-    Button add_portofolio;
+    Button add_service;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View fragmentView = inflater.inflate(R.layout.fragment_mua_portofolio, container, false);
 
-        add_portofolio = fragmentView.findViewById(R.id.btAddPortofolio);
+        View fragmentView = inflater.inflate(R.layout.fragment_mua_services, container, false);
+        add_service = fragmentView.findViewById(R.id.btAddService);
 
-        add_portofolio.setOnClickListener(new View.OnClickListener() {
+        add_service.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), AddPortofolioActivity.class);
+                Intent intent = new Intent(getActivity(), SelectCategoryActivity.class);
                 startActivity(intent);
             }
         });
@@ -58,10 +60,10 @@ public class MuaPortofolioFragment extends Fragment {
         sharedpreferences = this.getActivity().getSharedPreferences(my_shared_preferences, Context.MODE_PRIVATE);
         provider_id = sharedpreferences.getString("id_provider", "");
 
-        recyclerView = fragmentView.findViewById(R.id.rvPortofolio);
+        recyclerView = fragmentView.findViewById(R.id.rvServices);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        dataPortofolio = new ArrayList<>();
+        dataProvider = new ArrayList<>();
         getData();
 
         return fragmentView;
@@ -69,7 +71,7 @@ public class MuaPortofolioFragment extends Fragment {
 
     public void getData(){
         progressDialog = ProgressDialog.show(getActivity(),"Proses Login","Tunggu Sebentar. . .",false,false);
-        AndroidNetworking.get("http://belajarkoding.xyz/mua/provider/get_portofolio.php")
+        AndroidNetworking.get("http://belajarkoding.xyz/mua/provider/get_services.php")
                 .addQueryParameter("provider_id", provider_id)
                 .setPriority(Priority.LOW)
                 .build()
@@ -82,14 +84,16 @@ public class MuaPortofolioFragment extends Fragment {
                             try {
                                 for (int i = 0; i < response.length(); i++) {
                                     JSONObject data = response.getJSONObject(i);
-                                    dataPortofolio.add(new MuaPortofolioProvider(
+                                    dataProvider.add(new MuaServiceProvider(
                                             data.getString("id"),
-                                            data.getString("provider_id"),
-                                            data.getString("link")
+                                            data.getString("service"),
+                                            data.getString("price"),
+                                            data.getString("duration"),
+                                            data.getString("information")
                                     ));
                                 }
 
-                                MuaPortofolioProviderAdapter adapter = new MuaPortofolioProviderAdapter(getContext(), dataPortofolio);
+                                MuaServiceProviderAdapter adapter = new MuaServiceProviderAdapter(getContext(), dataProvider);
                                 recyclerView.setAdapter(adapter);
                             } catch (JSONException e) {
                                 e.printStackTrace();
@@ -102,6 +106,5 @@ public class MuaPortofolioFragment extends Fragment {
                     }
                 });
     }
-
 
 }

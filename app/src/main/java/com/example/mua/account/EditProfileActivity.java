@@ -28,8 +28,6 @@ import com.androidnetworking.interfaces.JSONArrayRequestListener;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
 import com.example.mua.MainActivity;
 import com.example.mua.R;
-import com.example.mua.mua.MenuMuaActivity;
-import com.example.mua.mua.MuaDetailServiceActivity;
 import com.squareup.picasso.MemoryPolicy;
 import com.squareup.picasso.Picasso;
 

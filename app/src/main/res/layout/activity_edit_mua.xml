@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".mua.EditMuaActivity">
+    tools:context=".mua.account.EditMuaActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -31,7 +31,7 @@
                 android:layout_height="200dp">
                 <ImageView
                     android:layout_gravity="center"
-                    android:src="@color/colorPrimary"
+                    android:src="@drawable/no_image"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="fitXY"
@@ -109,6 +109,7 @@
                 android:layout_height="wrap_content"/>
 
             <EditText
+                android:phoneNumber="true"
                 android:layout_marginTop="@dimen/marginForm"
                 android:id="@+id/edPhone"
                 android:paddingHorizontal="15dp"

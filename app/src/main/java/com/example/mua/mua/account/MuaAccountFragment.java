@@ -1,4 +1,4 @@
-package com.example.mua.mua;
+package com.example.mua.mua.account;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -22,7 +22,6 @@ import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONArrayRequestListener;
 import com.example.mua.MainActivity;
 import com.example.mua.R;
-import com.example.mua.account.EditProfileActivity;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;

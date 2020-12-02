@@ -127,7 +127,7 @@ public class DetailBookingActivity extends AppCompatActivity {
                                 Log.d(TAG, "onResponse: " + response);
                                 Toast.makeText(getApplicationContext() ,"Pesanan Selesai", Toast.LENGTH_LONG).show();
                                 Intent intent = new Intent(DetailBookingActivity.this, AddReviewActivity.class);
-                                intent.putExtra("service_id", service_id);
+                                intent.putExtra("order_id", booking_id);
                                 finish();
                                 startActivity(intent);
                             }

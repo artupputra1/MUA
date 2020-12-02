@@ -1,4 +1,4 @@
-package com.example.mua.mua;
+package com.example.mua.mua.account;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -29,9 +29,8 @@ import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONArrayRequestListener;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
-import com.example.mua.MainActivity;
 import com.example.mua.R;
-import com.example.mua.account.EditProfileActivity;
+import com.example.mua.mua.MenuMuaActivity;
 import com.squareup.picasso.MemoryPolicy;
 import com.squareup.picasso.Picasso;
 

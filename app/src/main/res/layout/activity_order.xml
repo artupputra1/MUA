@@ -35,6 +35,23 @@
                 android:background="@color/colorGray"
                 android:layout_width="match_parent"
                 android:layout_height="1.5dp"/>
+            <TextView
+                style="@style/textFormBold"
+                android:text="Durasi : "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tvDuration"
+                android:layout_marginTop="@dimen/marginForm"
+                style="@style/textForm"
+                android:text="Paket Wisuda 123"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <View
+                android:layout_marginTop="@dimen/marginSubHeader"
+                android:background="@color/colorGray"
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"/>
 
             <TextView
                 android:layout_marginTop="@dimen/marginForm"

@@ -8,6 +8,9 @@ import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.example.mua.R;
+import com.example.mua.mua.account.MuaAccountFragment;
+import com.example.mua.mua.portofolio.MuaPortofolioFragment;
+import com.example.mua.mua.service.MuaServicesFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MenuMuaActivity extends AppCompatActivity {

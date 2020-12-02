@@ -1,4 +1,4 @@
-package com.example.mua.mua;
+package com.example.mua.mua.service;
 
 public class MuaServiceProvider {
 

@@ -16,6 +16,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.common.Priority;
@@ -34,7 +35,7 @@ import java.util.Locale;
 public class OrderActivity extends AppCompatActivity {
 
     private static final String TAG = "OrderActivity";
-    TextView tv_service, tv_price, tv_information, tv_date, tv_time;
+    TextView tv_service, tv_price, tv_information, tv_date, tv_time, tv_duration;
     EditText ed_customer, ed_phone, ed_person, ed_address;
     Button bt_booking;
     private DatePickerDialog datePickerDialog;
@@ -72,15 +73,20 @@ public class OrderActivity extends AppCompatActivity {
         bt_booking.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent varIntent = new Intent(OrderActivity.this, OrderSummaryActivity.class);
-                varIntent.putExtra("service_id", service_id);
-                varIntent.putExtra("date", tv_date.getText().toString());
-                varIntent.putExtra("time", tv_time.getText().toString());
-                varIntent.putExtra("customer_name", ed_customer.getText().toString());
-                varIntent.putExtra("phone", ed_phone.getText().toString());
-                varIntent.putExtra("amount_person", ed_person.getText().toString());
-                varIntent.putExtra("address", ed_address.getText().toString());
-                startActivity(varIntent);
+                if (ed_phone.length() == 0 || tv_date.length() == 0 || tv_time.length() == 0 || ed_customer.length() == 0 || ed_phone.length() == 0 || ed_person.length() == 0 || ed_address.length() == 0){
+                    Toast.makeText(getApplicationContext() ,"Form Harus Diisi Semua", Toast.LENGTH_LONG).show();
+                }
+                else {
+                    Intent varIntent = new Intent(OrderActivity.this, OrderSummaryActivity.class);
+                    varIntent.putExtra("service_id", service_id);
+                    varIntent.putExtra("date", tv_date.getText().toString());
+                    varIntent.putExtra("time", tv_time.getText().toString());
+                    varIntent.putExtra("customer_name", ed_customer.getText().toString());
+                    varIntent.putExtra("phone", ed_phone.getText().toString());
+                    varIntent.putExtra("amount_person", ed_person.getText().toString());
+                    varIntent.putExtra("address", ed_address.getText().toString());
+                    startActivity(varIntent);
+                }
             }
         });
 
@@ -122,6 +128,7 @@ public class OrderActivity extends AppCompatActivity {
 
     public void init_view(){
         tv_service = findViewById(R.id.tvServices);
+        tv_duration = findViewById(R.id.tvDuration);
         tv_price = findViewById(R.id.tvPrice);
         tv_information = findViewById(R.id.tvInformation);
         tv_date = findViewById(R.id.tvDate);
@@ -149,6 +156,7 @@ public class OrderActivity extends AppCompatActivity {
                                 for (int i = 0; i < response.length(); i++) {
                                     JSONObject data = response.getJSONObject(i);
                                     tv_service.setText(data.getString("service"));
+                                    tv_duration.setText(data.getString("duration"));
                                     tv_price.setText(data.getString("price"));
                                     tv_information.setText(data.getString("information"));
                                 }

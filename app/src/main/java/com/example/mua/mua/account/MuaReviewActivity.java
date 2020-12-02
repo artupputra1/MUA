@@ -1,4 +1,4 @@
-package com.example.mua.mua;
+package com.example.mua.mua.account;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,7 +15,6 @@ import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.JSONArrayRequestListener;
 import com.example.mua.R;
 import com.example.mua.review.Review;
-import com.example.mua.review.ReviewActivity;
 import com.example.mua.review.ReviewAdapter;
 
 import org.json.JSONArray;
